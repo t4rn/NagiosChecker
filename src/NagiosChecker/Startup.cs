@@ -1,17 +1,16 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NagiosChecker.DataAccess;
+using NagiosChecker.DataModel;
 using NagiosChecker.Infrastructure;
 using NagiosChecker.Infrastructure.Filters;
 using NagiosChecker.Infrastructure.Repositories;
 using NagiosChecker.Services;
 using NagiosChecker.Services.Integration;
-using NagiosChecker.DataModel;
-using Microsoft.AspNetCore.Http;
 
 namespace NagiosChecker
 {
@@ -49,11 +48,13 @@ namespace NagiosChecker
             services.AddTransient<ILogService, KrisLogger>();
             services.AddTransient<INotifyService, NotifyService>();
             services.AddTransient<ISlService, SlService>();
+            services.AddTransient<IMsSqlService, MsSqlService>();
 
             services.AddTransient<IBikRepository>((arg)=> new BikDAL(Configuration.GetConnectionString("csMain")));
             services.AddTransient<IKntRepository>((arg) => new KntDAL(Configuration.GetConnectionString("csMain")));
             services.AddTransient<IRexsRepository>((arg) => new RexsDAL(Configuration.GetConnectionString("csMain")));
             services.AddTransient<ISlRepository>((arg) => new SlDAL(Configuration.GetConnectionString("csMain")));
+            services.AddTransient<IMsSqlRepository>((arg) => new MsSqlDAL(Configuration.GetConnectionString("csMain")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

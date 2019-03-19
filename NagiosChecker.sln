@@ -1,16 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{332E4DDC-6A7C-456E-9353-D9F220E5B6B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9A68A658-B6A6-49B7-80D4-1F25CA53D8C2}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NagiosChecker", "src\NagiosChecker\NagiosChecker.xproj", "{5522423D-0837-4979-B713-851856A0188A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NagiosChecker", "src\NagiosChecker\NagiosChecker.csproj", "{5522423D-0837-4979-B713-851856A0188A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NagiosChecker.Tests", "NagiosChecker.Tests\NagiosChecker.Tests.csproj", "{F9C8557C-5905-4E3D-9395-A3D7B944D21F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,11 +21,18 @@ Global
 		{5522423D-0837-4979-B713-851856A0188A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5522423D-0837-4979-B713-851856A0188A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5522423D-0837-4979-B713-851856A0188A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C8557C-5905-4E3D-9395-A3D7B944D21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C8557C-5905-4E3D-9395-A3D7B944D21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C8557C-5905-4E3D-9395-A3D7B944D21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C8557C-5905-4E3D-9395-A3D7B944D21F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5522423D-0837-4979-B713-851856A0188A} = {332E4DDC-6A7C-456E-9353-D9F220E5B6B6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8C15655-B174-4A78-A10A-29D6D415B2A7}
 	EndGlobalSection
 EndGlobal
